@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login.css" rel="stylesheet">
+    <title>Đăng nhập tài khoản</title>
+</head>
+<body>
+    <h2>Đăng nhập tài khoản cá nhân</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Tạo tài khoản</h1>
+                <div class="social-container">
+                    <a href="javascript:void(0)" title=""><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a> 
+                </div>
+                <span></span>
+                <input type="text" placeholder="Họ tên" />
+                <input type="email" placeholder="Địa chỉ email" />
+                <input type="password" placeholder="Mật khẩu" />
+                <input type="repassword" placeholder="Nhập lại mật khẩu" />
+                <button>Đăng kí</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Đăng nhập</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <span>Sử dụng tài khoản của bạn</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Quên mật khẩu</a>
+                <button>Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Nếu bạn có tài khoản cá nhân, vui lòng đăng nhập tài khoản tại đây</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                    <p></p>
+                    <a href="index.html" class="button">Quay trở lại trang chủ</a>
+<style>
+    a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    
+    }
+    </style>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào!</h1>
+                    <p>Nếu đây là lần đầu hoặc bạn chưa có tài khoản, xin vui lòng đăng kí tại đây</p>
+                    <button class="ghost" id="signUp">Đăng kí</button>
+                    <p></p>
+                    <a href="index.html" class="button">Trở về trang chủ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+    </script>
+</body>
+</html>
